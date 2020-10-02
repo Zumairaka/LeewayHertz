@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Blood</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.js"></script>
+</head>
+
+<body>
+
+    <!--Header-->
+    <div class="container-fluid bg-grey d-flex justify-content-center">
+        <h3 class="text-primary display-3 font-weight-bold">Transaction</h3>
+    </div>
+
+    <div class="container-fluid bg-grey d-flex justify-content-center">
+        <h4 class="text-success font-weight-bold">Enter the following details</h4>
+    </div>
+
+    <!--Main Page Content-->
+    <div class="container-fluid bg-grey d-flex justify-content-center">
+
+        <!--form for Users-->
+        <form action="/users" method="POST" class="form-group" name="users" onsubmit=" return validateUser(this)">
+
+            <div class="form-group">
+                <label class="text-primary font-weight-bold" for="trId">Transaction Id</label>
+                <input type="text" name="trId" class="form-control bg-secondary text-white" placeholder="Enter the transaction Id">
+            </div>
+
+            <div class="form-group">
+                <label class="text-primary font-weight-bold" for="uname">User Name</label>
+                <input type="text" name="uname" class="form-control bg-secondary text-white" placeholder="Enter the User Name">
+            </div>
+
+            <div class="form-group">
+                <label class="text-primary font-weight-bold" for="age">Age</label>
+                <input type="text" name="age" class="form-control bg-secondary text-white" placeholder="Enter the age">
+            </div>
+
+            <div class = "form-group d-flex justify-content-center">
+                <input type = "submit" class = "btn btn-success" value = "Submit" name = "submit" id = "submit">&nbsp;&nbsp;
+                <button type = "reset" class = "btn btn-secondary" value = "reset">Reset</button>
+            </div>
+
+        </form>
+
+    </div> 
+
+
+    <!--Show the Data-->
+    <div class="container-fluid bg-grey d-flex justify-content-center">
+        <h4 class="text-success font-weight-bold">Show Data</h4>
+    </div>
+
+    <div class="container-fluid bg-grey d-flex justify-content-center">
+
+        <!--to get Data-->
+        <form action="/users/getData" method="POST" class="form-group" name="users" onsubmit=" return validateId(this)">
+           
+            <div class="form-group">
+                <label class="text-primary font-weight-bold" for="trId">Transaction Id</label>
+                <input type="text" name="trId" class="form-control bg-secondary text-white" placeholder="Enter the transaction Id">
+            </div>
+            
+
+            <div class = "form-group d-flex justify-content-center">
+                <input type = "submit" class = "btn btn-success" value = "Get User" name = "users" id = "users"> &nbsp;&nbsp;
+                <button type = "reset" class = "btn btn-secondary" value = "reset">Reset</button>
+            </div>
+        </form>
+
+    </div>
+
+<!--Myscript-->
+<script src="/javascripts/myScript.js"></script>
+
+</body>
+</html>
